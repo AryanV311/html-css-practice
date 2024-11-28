@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+font-family: 'Inter','Lexend', sans-serif;
+font-weight: 400;
+}
+
+header{
+    width: 100%;
+    background-color: rgb(0, 115, 255);
+    display: flex;
+}
+
+header .logo {
+    padding: 10px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 2px solid white; */
+    width: 50%;
+}
+
+.logo img{
+    width: 89px;
+}
+.logo-bar{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end; 
+}
+
+.logo-bar i {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    font-size: 12px;
+}
+
+.logo-bar i:hover{
+    text-decoration: underline white;
+    cursor: pointer;
+    
+}
+
+.logo-bar .plus-icon {
+    color: gold;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+}
+
+.logo-bar .plus-icon img{
+    width: 12px;
+    height: 12px;
+}
+
+.logo .search-bar{
+    position: relative;
+    width: 70%;
+    display: flex;
+    justify-content: start;
+    margin-left: 15px;
+    /* border: 2px solid white; */
+}
+
+.logo .search-bar input{
+   
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    width: 100%;
+    padding: 13px;
+    box-shadow: 5px 7px 25px #0235b480;
+}
+
+.search-bar i {
+    font-size: 18px;
+    position: absolute;
+    top: 9px;
+    right: 12px;
+    z-index: 1;
+    color: rgb(0, 115, 255);
+}
+
+header .nav li {
+    list-style: none;
+    cursor: pointer;
+}
+
+header .nav{
+    display: flex;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    /* border: 2px solid white; */
+}
+
+header .nav li i:hover{
+    animation: rotate 1s;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+
+.main-product{
+    width: 100%;
+}
+
+.product-sections{
+    padding: 25px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    border: 2px solid gray;
+    background-color: rgb(243, 246, 247);
+}
+
+.phone-image{
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    cursor: pointer;
+    /* background-color: rgb(255, 255, 255); */
+    /* border: 2px solid black; */
+}
+
+.phone-image img{
+    mix-blend-mode: darken;
+}
+
+.product-sections .phone-image:hover{
+    color: red;
+}
+
+.product-sections .mobile-info{
+    padding: 15px;
+    margin-left: 5px;
+    cursor: pointer;
+    /* border: 2px solid black; */
+}
+
+
+.mobile-info h3{
+    color: #212121;
+    font-size: 18px;
+}
+
+.mobile-info .ratings{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    line-height: 2.0;
+    text-align: center  ;
+}
+
+.mobile-info .ratings p{
+    display: flex;
+    font-size: 14px;
+    color: white;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 7px 2px 7px;
+    text-align: center;
+    height: 0.5cm;
+    border-radius: 2px;
+    background-color: #388e3c;
+}
+
+.ratings p i {
+    font-size: 9px;
+}
+
+.ratings p:hover{
+    cursor: pointer;
+}
+
+.ratings .rating-review{
+    font-weight: 500;
+    font-size: 14px;
+    color: #878787;
+}
+
+.mobile-info .mobile-details{
+    margin-top: 10px;
+    line-height: 1.6;
+    color: #313131;
+}
+
+.mobile-details li {
+    color: #878787;
+}
+
+.short-descriptions{
+    /* border: 2px solid black; */
+    padding: 10px;
+    margin-left: 200px;
+    line-height: 1.6;
+    height: auto;
+}
+
+.short-descriptions .price{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.short-descriptions .price img{
+    width: 85px; 
+}
+
+.discounts div{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.discounts div p:first-child{
+    color: #878787;
+    text-decoration: line-through;
+}
+
+.discounts div p:nth-child(2){
+    font-weight: 600;
+    color: #388e3c;
+}
+
+.discounts p:nth-child(2){
+    font-size: 13px;
+}
+
+.discounts p:nth-child(3){
+    font-weight: 500;
+    font-size: 14px;
+    color: #388e3c;
+}
+
+.discounts p:nth-child(4){
+    font-size: 14px;
+    font-weight: 600;
+    color: #C70055;
+}
+
