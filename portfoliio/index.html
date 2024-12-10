@@ -18,14 +18,14 @@
 
        <div class="navbar">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#home">About</a></li>
-                <li><a href="#home">Skill</a></li>
-                <li><a href="#home">projects</a></li>
-                <li><a href="#home">Contact us</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skill">Skill</a></li>
+                <li><a href="#project">projects</a></li>
+                <li><a href="#contact">Contact us</a></li>
        </div>
     </header>
 
-    <div class="main-content">
+    <div id="home" class="main-content">
        <div class="image-container">
         <div class="profile-picture">
             <img src="https://aryanv311.github.io/portfolio/files/profile2.png" alt="">
@@ -53,7 +53,7 @@
     </div>
 
     <!-- Skills -->
-
+    <div id="skill">
     <div class="Skill-sections">
         <h1>Skills</h1>
         <ul class="skill-icons">
@@ -67,7 +67,7 @@
     </div>
 
     <!-- About -->
-     <div class="About-sections">
+     <div id="about" class="About-sections">
         <div class="About-me">
             <h1>About Me</h1>
             <ul>
@@ -92,34 +92,62 @@
         </div>
      </div>
 
+    </div>
+
      <!-- My Projects -->
-     <div class="project-sections">
-        <h1>My Projects</h1>
+     <div id="project" class="project-sections">
+        <h1>MY PROJECTS</h1>
         <p>Discover my projects, where creativity meets innovation</p>
 
         <div class="project-info">
-            <div>
+            <div class="card">
                 <div class="project-img">
-                    <i>logo</i>
+                    <img src="img/Screenshot 2024-11-28 102548.png" alt="">
                 </div>
-                <h1>Project 1</h1>
-                <p></p>
+                <h2>Todo List</h2>
+                <p>A To-Do List is a simple, intuitive tool for organizing tasks and staying productive. It allows users to create, prioritize, and track tasks, helping manage daily activities or long-term goals efficiently. Ideal for personal or professional use, it ensures nothing important gets overlooked.</p>
             </div>
-            <div>
+            <div class="card">
                 <div class="project-img">
-                    <i>logo</i>
+                    <img src="img/Screenshot 2024-11-28 110750.png" alt="">
                 </div>
-                <h1>Project 2</h1>
-                <p></p>
+                <h2>Anime Landing page</h2>
+                <p>A To-Do List is a simple, intuitive tool for organizing tasks and staying productive. It allows users to create, prioritize, and track tasks, helping manage daily activities or long-term goals efficiently. Ideal for personal or professional use, it ensures nothing important gets overlooked.</p>
             </div>
-            <div>
+            <div class="card">
                 <div class="project-img">
-                    <i>logo</i>
+                    <img src="img/Screenshot 2024-11-28 111310.png" alt="">
                 </div>
-                <h1>Project 3</h1>
-                <p></p>
+                <h2>Pokemon Website</h2>
+                <p>A To-Do List is a simple, intuitive tool for organizing tasks and staying productive. It allows users to create, prioritize, and track tasks, helping manage daily activities or long-term goals efficiently. Ideal for personal or professional use, it ensures nothing important gets overlooked.</p>
             </div>
         </div>
+     </div>
+
+     <!-- Contact Page -->
+
+     <div class="contact-sections">
+        <h1>contact Me</h1>
+        <p>Get In Touch</p>
+
+        <form>
+            <div class="name">
+                <input type="text" placeholder="Name">
+            </div>
+            <div class="email">
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="subject">
+                <input type="text" placeholder="Subject">
+            </div>
+            <div class="textarea">
+                <input type="textarea" placeholder="Message">
+            </div>
+
+            <button class="send-btn">
+                Send Message
+            </button>
+        </form>
      </div>
 
 </body>

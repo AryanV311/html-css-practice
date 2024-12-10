@@ -38,7 +38,7 @@ header {
     justify-content: space-around;
     text-align: center;
     align-items: center;
-    /* border: 2px solid black; */
+    /* border: 2px solid white; */
     background-color: #313131;
     padding: 20px 20px;
 }
@@ -71,8 +71,8 @@ header {
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 600px;
-    /* border: 2px solid white; */
+    height: 770px;
+    border: 2px solid white;
 }
 
 .image-container{
@@ -292,6 +292,13 @@ header {
     color: white;
 }
 
+.mid-container{
+    height: 700px;
+    padding-top: 20px;
+    margin-bottom: 10px;
+    /* border: 2px solid white; */
+}
+
 .About-sections .about-info{
     width: 30%;
     /* border: 2px solid white; */
@@ -327,10 +334,86 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    max-width: 1500px;
+    height: 100%;
+    padding: 9px 0;
+    color: white;
     border: 2px solid white;
 }
 
+.project-sections h1{
+    color: #fed700;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.project-sections p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
 .project-info{
+    /* border: 2px solid white; */
+    color: white;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+}
+
+.project-info .card{
+    border: 2px solid #878787;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    padding: 10px 15px;
+    margin: 20px;
+}
+
+.project-info .card:hover{
+    border-color: #fed700;
+}
+
+.project-info .card .project-img{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    height: 70%;
+    /* border: 2px solid white; */
+    padding: 4px;
+}
+
+.project-info .card .project-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+.project-info .card .project-img img:hover{
+    transform: scale(0.9);
+}
+
+
+.project-info .card h2 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.project-info .card p{
+    padding: 10px;
+    letter-spacing: 1.2px;
+}
+
+.contact-sections{
+    border: 2px solid white;
+}
+
+.contact-sections form {
     border: 2px solid white;
 }
