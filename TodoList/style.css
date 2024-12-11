@@ -12,7 +12,7 @@ body{
 .container{  
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     background-image: url("https://img.freepik.com/free-vector/gradient-glassmorphism_23-2149456191.jpg?semt=ais_hybrid");
     background-repeat: no-repeat;
@@ -22,9 +22,34 @@ body{
 .main-card {
     padding: 40px;
     border-radius: 10px;
+    border: 1px solid #eceaea;
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.main-card2{
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 400px;
+    width: 600px;
+    border-radius: 10px;
     border: 2px solid #eceaea;
     backdrop-filter: blur(10px);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow-y: scroll;
+}
+
+.main-card2::-webkit-scrollbar{
+    display: none;
+}
+
+.main-card2 h1{
+    text-align: center;
+    color: rgb(31, 2, 103);
+    font-size: 40px;
+    text-shadow: rgb(31, 2, 103) 1px 0 10px;
 }
 
 .main-card .search-bar{
@@ -70,6 +95,18 @@ body{
     /* text-shadow: 1px 1px 2px rgb(31, 2, 103), 0 0 1em blue, 0 0 0.2em blue; */
 }
 
+.task-list2{
+    color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+    margin-top: 30px;
+    /* border: 2px solid black;  */
+}
+
 .task-list{
     color: #fff;
     width: 100%;
@@ -83,6 +120,18 @@ body{
 }
 
 .task-list .list {
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: 2px solid #fff;
+    
+}
+
+.task-list2 .list {
     border-radius: 20px;
     padding: 10px;
     margin: 10px;
@@ -101,7 +150,19 @@ body{
     transform: scale(1.1);
 }
 
+.task-list2 .list:hover{
+    /* color: rgb(10, 95, 223);  */
+    border-color: rgb(79, 2, 146);
+    cursor: pointer;
+    transition: ease-in 0.3s;
+    transform: scale(1.1);
+}
+
 .task-list .list i {
+    color: rgb(159, 24, 24);
+}
+
+.task-list2 .list i {
     color: rgb(159, 24, 24);
 }
 
