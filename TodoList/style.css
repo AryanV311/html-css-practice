@@ -14,7 +14,7 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-image: url("https://img.freepik.com/free-vector/gradient-glassmorphism_23-2149456191.jpg?semt=ais_hybrid");
+    background-image: url("https://images.unsplash.com/photo-1659878997289-b9ab5a0663b6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -47,9 +47,9 @@ body{
 
 .main-card2 h1{
     text-align: center;
-    color: rgb(31, 2, 103);
+    color: rgb(188, 211, 234);
     font-size: 40px;
-    text-shadow: rgb(31, 2, 103) 1px 0 10px;
+    text-shadow: rgb(13, 1, 41) 1px 0 10px;
 }
 
 .main-card .search-bar{
@@ -87,11 +87,11 @@ body{
 }
 
 .main-card h1 {
-    color: rgb(31, 2, 103);
+    color: rgb(217, 223, 228);
     margin-bottom: 25px;
     text-align: center;
     font-size: 40px;
-    text-shadow: rgb(31, 2, 103) 1px 0 10px;
+    text-shadow: rgb(88, 66, 143) 1px 0 10px;
     /* text-shadow: 1px 1px 2px rgb(31, 2, 103), 0 0 1em blue, 0 0 0.2em blue; */
 }
 
@@ -154,8 +154,8 @@ body{
     /* color: rgb(10, 95, 223);  */
     border-color: rgb(79, 2, 146);
     cursor: pointer;
-    transition: ease-in 0.3s;
-    transform: scale(1.1);
+    /* transition: ease-in 0.3s; */
+    /* transform: scale(1.1); */
 }
 
 .task-list .list i {
