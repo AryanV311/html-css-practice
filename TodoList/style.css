@@ -111,6 +111,7 @@ body{
     color: #fff;
     width: 100%;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -126,9 +127,17 @@ body{
     margin: 10px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
-    border: 2px solid #fff;
-    
+}
+
+.task-list .list li {
+    flex-grow: 1;
+}
+
+.task-list .list i {
+   /* border: 2px solid black; */
+   margin: 0 10px;
 }
 
 .task-list2 .list {
@@ -141,6 +150,17 @@ body{
     border: 2px solid #fff;
     
 }
+
+.task-list2 .list li {
+    flex-grow: 1;
+}
+
+.task-list2 .list i {
+   /* border: 2px solid black; */
+   margin: 0 10px;
+}
+
+
 
 .task-list .list:hover{
     /* color: rgb(10, 95, 223);  */
@@ -161,11 +181,99 @@ body{
 .task-list .list i {
     color: rgb(159, 24, 24);
 }
+.task-list .list i:nth-child(2){
+    color: rgb(11, 83, 23);
+}
 
 .task-list2 .list i {
     color: rgb(159, 24, 24);
 }
 
+.task-list2 .list i:nth-child(2){
+    color: rgb(11, 83, 23);
+}
+
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .main-card, .main-card2 {
+        width: 90%;
+    }
+
+    .main-card .search-bar input {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-card h1, .main-card2 h1 {
+        font-size: 32px;
+    }
+
+    .main-card .search-bar input {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .main-card .search-bar i {
+        height: 30px;
+        width: 30px;
+    }
+
+    .task-list .list, .task-list2 .list {
+        padding: 10px;
+        margin: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-card h1, .main-card2 h1 {
+        font-size: 24px;
+    }
+
+    .main-card .search-bar input {
+        font-size: 14px;
+    }
+
+    .main-card .search-bar i {
+        height: 25px;
+        width: 25px;
+    }
+
+    .task-list .list, .task-list2 .list {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .task-list .list i, .task-list2 .list i {
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 10px;
+    }
+
+    .main-card, .main-card2 {
+        padding: 20px;
+    }
+
+    .main-card .search-bar input {
+        font-size: 12px;
+    }
+
+    .task-list .list, .task-list2 .list {
+        padding: 6px;
+    }
+}
 
 
 

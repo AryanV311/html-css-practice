@@ -1,37 +1,55 @@
 const input = document.querySelector(".input")
-const add = document.querySelector('.add')
-// const trash = document.querySelectorAll(".trash")
+let add = document.querySelector('#add')
+// console.log(add.classList)
 const list = document.querySelectorAll(".list")
 // console.log(list);
 const taskList = document.querySelector('.task-list')
-const mainCard = document.querySelector(".main-card")
 
+
+
+let editTodo = null;
+
+//* Add task function
 const addTask = () => {
     if(input.value.trim() === ""){
-        alert("please enter a task")
+        alert("kyu kyu karte ho aisa likh lo kuch pahele")
         return
     }
+
+    console.log(add.classList);
+    if(add.classList.contains("fa-pen")){
+        editTodo.querySelector("li").innerText = input.value.trim();
+        add.classList.remove("fa-pen");
+        add.classList.add("fa-plus");
+        taskList.appendChild(editTodo)
+        input.value = ""; // Clear the input field
+        editTodo = null;
+
+    }else {
 
     const div = document.createElement('div')
     div.setAttribute("class","list")
     div.setAttribute("draggable","true")
    
     div.innerHTML=`<li>${input.value}</li>
+                <i class="fa-solid fa-pen"></i>
                 <i class="fa-solid fa-trash"></i>`;
 
     console.log(div);
     taskList.appendChild(div)
     
     input.value =""
+    
+    }
 
     
 }
 
 add.addEventListener('click',addTask)
 
-//removing the task
+//* removing the task function
 taskList.addEventListener("click", (e) => {
-    console.log(e.target.tagName);
+    // console.log(e.target.tagName);
     if(e.target.tagName === 'I'){
         let task = e.target.parentNode
         task.remove()
@@ -39,27 +57,21 @@ taskList.addEventListener("click", (e) => {
     
 });
 
-
+// * Drag and Drop function from here 
 const taskList2 = document.querySelector(".task-list2");
 const mainCard2 = document.querySelector(".main-card2")
+const mainCard = document.querySelector(".main-card")
+
 
 let selected = null;
 
 document.body.addEventListener("dragstart", (e) => {
-    console.log("body", e.target.classList);
+    // console.log("body", e.target.classList);
     if (e.target.classList.contains("list")) {
         selected = e.target;
     }
 });
 
-// for(let li of list){
-//     // console.log(li)
-//     li.addEventListener('dragstart', function(e){
-//         // console.log(e.target)
-//         selected = e.target
-//         return selected
-//     })
-// }
 
 mainCard2.addEventListener('dragover', function(e){
     e.preventDefault()
@@ -68,7 +80,7 @@ mainCard2.addEventListener('dragover', function(e){
 
 mainCard2.addEventListener('drop',function(e){
     e.preventDefault();
-    console.log(selected);
+    // console.log(selected);
     if(selected){
         taskList2.appendChild(selected)
         selected = null;
@@ -87,4 +99,24 @@ mainCard.addEventListener('drop', function(e){
     }
 })
 
-console.log(taskList);
+
+//* Edit Function
+
+const updateTodo = (e) => {
+    console.log(e.target.parentNode)
+    if(e.target.classList.contains('edit')){
+        editTodo = e.target.parentNode;
+    input.value = editTodo.querySelector("li").innerText;
+
+    // Switch to edit mode
+    add.classList.remove("fa-plus");
+    add.classList.add("fa-pen");
+
+    input.focus();
+    }
+}
+
+//* Add task in Storage
+
+
+taskList.addEventListener('click',updateTodo)
