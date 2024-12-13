@@ -5,8 +5,6 @@ const list = document.querySelectorAll(".list")
 // console.log(list);
 const taskList = document.querySelector('.task-list')
 
-
-
 let editTodo = null;
 
 //* Add task function
