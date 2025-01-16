@@ -62,7 +62,7 @@ const mainCard = document.querySelector(".main-card")
 
 
 let selected = null;
-
+  
 document.body.addEventListener("dragstart", (e) => {
     // console.log("body", e.target.classList);
     if (e.target.classList.contains("list")) {
@@ -103,7 +103,7 @@ mainCard.addEventListener('drop', function(e){
 const updateTodo = (e) => {
     console.log(e.target.parentNode)
     if(e.target.classList.contains('edit')){
-        editTodo = e.target.parentNode;
+    editTodo = e.target.parentNode;
     input.value = editTodo.querySelector("li").innerText;
 
     // Switch to edit mode
