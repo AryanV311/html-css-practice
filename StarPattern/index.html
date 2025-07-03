@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="head">
+        <h1>Star Pattern generator</h1>
+        <p>Enter the number of rows, select a pattern, choose a character, and specify repetitions!</p>
+      </header>
+      <main class='main-container'>
+        <div class='container'>
+          <div class='inputs'>
+            <label for='rows'>Number of rows</label>
+            <input class='input' id='rows' type='number' min={1} max={20} placeholder='Enter a number (1-20)'>
+          </div>
+          <div class='inputs'>
+            <label for='patterns'>Pattern Types</label>
+            <select class='input' id='patterns' class='pattern'>
+              <option value='centerTriangle'>Center Triangle</option>
+              <option value='leftTriangle'>Left Triangle</option>
+              <option value='invertedTriangle'>Inverted Triangle</option>
+            </select>
+          </div>
+          <div class='inputs'>
+            <label for='repeat'>Number of Repeatations</label>
+            <input id='repeat' class='input' type='number' min={1} max={10} placeholder='Enter a repetitions (1-20)' />
+          </div>
+          <div class='btns'>
+            <button id="generate" class='gnrt-btn btn'>Generate Pattern</button>
+            <button id="clear" class='clr-btn btn'>Clear</button>
+          </div>
+          <div id="error" class="error"></div>
+        </div>
+        <div id='output-box' class='output'>
+        </div>
+        </div>
+      </main>
+      <script src="script.js"></script>
+</body>
+</html>
